@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+    <!--https://www.w3schools.com/html/html_charset.asp-->
+    <meta charset="UTF-8">
+
+  </head>
+  <body onload="toltsdFel()">
+
+    <div class="navBar">
+      <!--refresh-->
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="current">Gallery</a>
+      <a href="#" class="about">About</a>
+    </div>
+
+    <div class="cim">
+      <h1>Gallery</h1>
+      <p><i>Click on the picture to take a closer look...</i></p>
+    </div>
+
+    <div class="kepek">
+      <table id="tablazat">
+        <tr>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+        </tr>
+        <tr>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+        </tr>
+        <tr>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+          <td><img><p></p></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="foot">
+      <a href="mailto:kyokende@gmail.com" id="bug">Reeport bug (via e-mail)</a>
+      <p><i>Created by: nimfas</i></p>
+    </div>
+
+    <div class="alertBox" id="csukjBe">
+      <span>This page was built and tested in Chromium ver: 71.0.3578.98, thus some function may not work in other browsers.</span>
+      <span id="ok" onclick="bezar()">Got it.</span>
+    </div>
+
+    <script src="gallery.js"></script>
+
+  </body>
+</html>
