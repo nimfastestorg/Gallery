@@ -92,34 +92,87 @@ body {
   background-color: black;
 }
 
+.galeria {
+  width: 100%;
+  min-height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 .cim {
-  margin-top: 80px;
-  margin-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
-.kepek {
+.galeria .kepek {
   margin-bottom: 50px;
 }
 
-.kepek table, td {
+.galeria .kepek table, td {
   /*border-style: solid;*/
   /*border-width: 1px;*/
   /*border-color: black;*/
   border-spacing: 10px;
 }
 
-.kepek table {
+.galeria .kepek table {
   width: 100%;
 }
 
-.kepek td {
+.galeria .kepek td {
   max-width: 20%;
   text-align: center;
   padding: 2px;
 }
 
-img {
+.galeria img {
   /*a cella 100%-a*/
   max-width: 100%;
+  cursor: pointer;
+}
+
+.nezegeto {
+  display: none;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100%;
+}
+
+.nezegeto img {
+  max-width: 50%;
+}
+
+.nezegeto .kep {
+  text-align: center;
+}
+
+.nezegeto p {
+}
+
+.nezegeto button {
+  position: absolute;
+  /*nagyjabol a kozepe*/
+  top: 50%;
+  /*Igy szebb lesz a keret*/
+  width: 50px;
+  height: 50px;
+  background-color: #4286f4;
+  color: black;
+  border-style: none;
+  border-radius: 50%;
+}
+
+.nezegeto button:hover {
+  background-color: black;
+  color: #4286f4;
+}
+
+.nezegeto .next {
+  left: 0px;
+}
+
+.nezegeto .prev {
+  right: 0px;
 }

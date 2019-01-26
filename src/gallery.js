@@ -63,15 +63,28 @@ let kepek = [
 
 //A CIMBEN TULCSORDULO SZOVEG NAGYON NEM TESZ JOT!!!
 
+function kepKatt(a, b) {
+  alert(a + ';' + b);
+  document.getElementsByClassName('galeria')[0].style.display = 'none';
+  document.getElementsByClassName('nezegeto')[0].style.display = 'block';
+  let temp = document.getElementsByClassName('kep')[0];
+  temp.getElementsByTagName('IMG')[0].src = kepek[a][b].forras;
+}
+
 function toltsdFel() {
-  let cella;
-  for(i = 0; i < 3; i++) {
-    for(j = 0; j < 4; j++) {
+  let tempCella;
+  for(let i = 0; i < 3; i++) {
+    for(let j = 0; j < 4; j++) {
       //https://www.w3schools.com/jsref/coll_table_cells.asp
-      cella = document.getElementById('tablazat').rows[i].cells[j];
+      tempCella = document.getElementById('tablazat').rows[i].cells[j];
       //https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp
-      cella.getElementsByTagName('IMG')[0].src = kepek[i][j].forras;
-      cella.getElementsByTagName('P')[0].innerHTML = kepek[i][j].cim;
+      tempCella.getElementsByTagName('IMG')[0].src = kepek[i][j].forras;
+
+      //https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+      tempCella.getElementsByTagName('IMG')[0].addEventListener("click", function() { kepKatt(i, j); });
+      
+
+      tempCella.getElementsByTagName('P')[0].innerHTML = kepek[i][j].cim;
     }
   }
 }
