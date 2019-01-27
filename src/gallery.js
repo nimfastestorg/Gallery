@@ -8,7 +8,7 @@ let kepek = [
     {    //kepek[0][0]
       cim : 'Ugly leaves',
       forras : '../imgSrc/pexels-photo-1382393.jpeg',
-      leiras : 'Irrelevant filler'
+      leiras : 'Irrelevant filleraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
     }, { //kepek[0][1]
       cim : 'Coffee',
       forras : '../imgSrc/pexels-photo-1415555.jpeg',
@@ -63,28 +63,67 @@ let kepek = [
 
 //A CIMBEN TULCSORDULO SZOVEG NAGYON NEM TESZ JOT!!!
 
-function kepKatt(a, b) {
-  alert(a + ';' + b);
+function setKepDolgai(i, j) {
+  let temp = document.getElementsByClassName('kep')[0];
+  temp.getElementsByTagName('IMG')[0].src = kepek[i][j].forras;
+  temp.getElementsByTagName('H2')[0].innerHTML = kepek[i][j].cim;
+  temp.getElementsByTagName('P')[0].innerHTML = kepek[i][j].leiras;
+}
+
+function toGrid() {
+  document.getElementsByClassName('galeria')[0].style.display = 'block';
+  document.getElementsByClassName('nezegeto')[0].style.display = 'none';
+}
+
+function toNezegeto(i, j) {
   document.getElementsByClassName('galeria')[0].style.display = 'none';
   document.getElementsByClassName('nezegeto')[0].style.display = 'block';
-  let temp = document.getElementsByClassName('kep')[0];
-  temp.getElementsByTagName('IMG')[0].src = kepek[a][b].forras;
+  setKepDolgai(i, j);
 }
 
 function toltsdFel() {
   let tempCella;
-  for(let i = 0; i < 3; i++) {
-    for(let j = 0; j < 4; j++) {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 4; j++) {
+
       //https://www.w3schools.com/jsref/coll_table_cells.asp
       tempCella = document.getElementById('tablazat').rows[i].cells[j];
+
       //https://www.w3schools.com/jsref/met_document_getelementsbytagname.asp
       tempCella.getElementsByTagName('IMG')[0].src = kepek[i][j].forras;
 
       //https://www.w3schools.com/jsref/met_element_addeventlistener.asp
-      tempCella.getElementsByTagName('IMG')[0].addEventListener("click", function() { kepKatt(i, j); });
-      
-
+      tempCella.getElementsByTagName('IMG')[0].addEventListener("click", function() { toNezegeto(i, j); kepIndexInit(i, j); });
       tempCella.getElementsByTagName('P')[0].innerHTML = kepek[i][j].cim;
     }
   }
+}
+
+let kepI, kepJ;
+
+function kepIndexInit(i, j) {
+  kepI = i;
+  kepJ = j;
+}
+
+//span onclick="valtozz(-1)"
+
+//kell valamit kezdeni a tomb 'ures' elemeivel
+function leptet(ertek) {
+  kepJ += ertek;
+  if (kepJ >= 4) { //kepJ = kepek[kepI].length
+    kepJ = 0;
+    kepI++;
+  } else if (kepJ <= -1) {
+    kepJ = 3;
+    kepI--;
+  }
+  if (kepI >= 3) {
+    kepI = 0;
+    //a kepJ mar 0
+  } else if (kepI <= -1) {
+    kepI = 2
+    //a kepJ mar 3
+  }
+  setKepDolgai(kepI, kepJ);
 }

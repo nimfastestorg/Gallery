@@ -92,17 +92,19 @@ body {
   background-color: black;
 }
 
+.cim {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
+
 .galeria {
   width: 100%;
   min-height: 100%;
   padding: 0px;
   margin: 0px;
-}
-
-.cim {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  text-align: center;
 }
 
 .galeria .kepek {
@@ -132,6 +134,8 @@ body {
   cursor: pointer;
 }
 
+
+
 .nezegeto {
   display: none;
   width: 100%;
@@ -140,39 +144,48 @@ body {
   min-height: 100%;
 }
 
-.nezegeto img {
-  max-width: 50%;
+/*Ezzel egyutt a cim is lejjebb csuszna
+.nezegeto .vissza {
+  padding-top: 45px;
+}*/
+
+.nezegeto .vissza p{
+  float: right;
+  padding-top: 40px;
+  padding-right: 15px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .nezegeto .kep {
   text-align: center;
 }
 
-.nezegeto p {
+.nezegeto .kep img {
+  max-width: 50%;
+  max-height: 50%;
 }
 
-.nezegeto button {
-  position: absolute;
-  /*nagyjabol a kozepe*/
-  top: 50%;
-  /*Igy szebb lesz a keret*/
-  width: 50px;
-  height: 50px;
-  background-color: #4286f4;
-  color: black;
-  border-style: none;
-  border-radius: 50%;
+.nezegeto .kep p {
+  max-width: 100px;
+  overflow: hidden;
 }
 
-.nezegeto button:hover {
+.nezegeto .kep span {
+  color: #f2f2f2;
+  padding: 20px;
   background-color: black;
-  color: #4286f4;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
 }
 
-.nezegeto .next {
+.nezegeto .kep .prev {
+  border-radius: 0px 5px 5px 0px;
   left: 0px;
 }
 
-.nezegeto .prev {
+.nezegeto .kep .next {
+  border-radius: 5px 0px 0px 5px;
   right: 0px;
 }
