@@ -6,5 +6,5 @@ This website is only made because one of my friend asked me to help him in his g
 This website has:
 * Home page
 * Gallery in grid view
-* Gallery in **other** view (not working yet)
+* Gallery in **other** view
 * About page
