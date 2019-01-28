@@ -1,0 +1,193 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0px;
+  background-color: #f2f2f2;
+}
+
+.navBar {
+  z-index: 1048576;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  /*e nelkul nem allitja be a hatterszint*/
+  overflow: hidden;
+  background-color: #4286f4;
+}
+
+.navBar a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  float: left;
+  padding: 12px 20px;
+}
+
+.navBar .current {
+  color: #4286f4;
+  background-color: black;
+}
+
+.navBar .about {
+  float: right;
+}
+
+.navBar a:hover {
+  color: #4286f4;
+  background-color: black;
+}
+
+.foot {
+  overflow: hidden;
+  background-color: #404244;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+}
+
+.foot p, a{
+  color: black;
+  font-size: 12px;
+  float: right;
+  padding: 30px 20px;
+  margin: 0px;
+}
+
+.foot a{
+  float: left;
+}
+
+.alertBox {
+  z-index: 1048576;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #4286f4;
+  text-align: center;
+}
+
+.alertBox span {
+  color: black;
+  /*https://stackoverflow.com/questions/35592168/padding-not-working-in-span-tag*/
+  display: inline-block;
+  padding: 12px 20px;
+}
+
+.alertBox #ok {
+  float: right;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.alertBox #ok:hover {
+  color: #4286f4;
+  background-color: black;
+}
+
+.cim {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
+
+.galeria {
+  width: 100%;
+  min-height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.galeria .kepek {
+  margin-bottom: 50px;
+}
+
+.galeria .kepek table, td {
+  border-spacing: 10px;
+}
+
+.galeria .kepek table {
+  width: 100%;
+}
+
+.galeria .kepek td {
+  max-width: 20%;
+  min-width: 20%;
+  overflow: hidden;
+  text-align: center;
+  padding: 2px;
+}
+
+.galeria img {
+  /*a cella 100%-a*/
+  max-width: 100%;
+  cursor: pointer;
+}
+
+
+
+.nezegeto {
+  display: none;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100%;
+}
+
+/*Ezzel egyutt a cim is lejjebb csuszna
+.nezegeto .vissza {
+  padding-top: 45px;
+}*/
+
+.nezegeto .vissza p{
+  float: right;
+  padding-top: 40px;
+  padding-right: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nezegeto .kep {
+  text-align: center;
+}
+
+.nezegeto .kep img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/*Forras:
+../imgSrc/alignDiv.png*/
+.nezegeto .kep .leiras {
+  max-width: 750px;
+  display: inline-block;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.nezegeto .kep span {
+  color: #f2f2f2;
+  padding: 20px;
+  background-color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+.nezegeto .kep .prev {
+  border-radius: 0px 5px 5px 0px;
+  left: 0px;
+}
+
+.nezegeto .kep .next {
+  border-radius: 5px 0px 0px 5px;
+  right: 0px;
+}
