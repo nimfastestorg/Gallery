@@ -8,7 +8,7 @@ let kepek = [
     {    //kepek[0][0]
       cim : 'Ugly leaves',
       forras : '../imgSrc/pexels-photo-1382393.jpeg',
-      leiras : 'Irrelevant filleraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+      leiras : 'Irrelevant filler about this picture. This filler should be a bit longer to test whether the div element works fine, and the text is fully readable.'
     }, { //kepek[0][1]
       cim : 'Coffee',
       forras : '../imgSrc/pexels-photo-1415555.jpeg',
@@ -42,7 +42,7 @@ let kepek = [
     }
   ], [
     {    //kepek[2][0]
-      cim : 'Car',
+      cim : 'Car', //Longer captions will not cause any problem with the width of the tabledataaptions will not cause any problem with the waptions will not cause any problem with the waptions will not cause any problem with the w
       forras : '../imgSrc/pexels-photo-790176.jpeg',
       leiras : 'Irrelevant filler'
     }, { //kepek[2][1]
@@ -60,8 +60,6 @@ let kepek = [
     }
   ]
 ];
-
-//A CIMBEN TULCSORDULO SZOVEG NAGYON NEM TESZ JOT!!!
 
 function setKepDolgai(i, j) {
   let temp = document.getElementsByClassName('kep')[0];
@@ -81,6 +79,8 @@ function toNezegeto(i, j) {
   setKepDolgai(i, j);
 }
 
+
+//A CIMBEN TULCSORDULO SZOVEG NAGYON NEM TESZ JOT!!!
 function toltsdFel() {
   let tempCella;
   for (let i = 0; i < 3; i++) {
@@ -106,24 +106,23 @@ function kepIndexInit(i, j) {
   kepJ = j;
 }
 
-//span onclick="valtozz(-1)"
-
-//kell valamit kezdeni a tomb 'ures' elemeivel
 function leptet(ertek) {
-  kepJ += ertek;
-  if (kepJ >= 4) { //kepJ = kepek[kepI].length
-    kepJ = 0;
-    kepI++;
-  } else if (kepJ <= -1) {
-    kepJ = 3;
-    kepI--;
-  }
-  if (kepI >= 3) {
-    kepI = 0;
-    //a kepJ mar 0
-  } else if (kepI <= -1) {
-    kepI = 2
-    //a kepJ mar 3
-  }
+  do {
+    kepJ += ertek;
+    if (kepJ >= 4) { //kepJ = kepek[kepI].length
+      kepJ = 0;
+      kepI++;
+    } else if (kepJ <= -1) {
+      kepJ = 3;
+      kepI--;
+    }
+    if (kepI >= 3) {
+      kepI = 0;
+      //a kepJ mar 0
+    } else if (kepI <= -1) {
+      kepI = 2
+      //a kepJ mar 3
+    }
+  }while (kepek[kepI][kepJ].forras == '');
   setKepDolgai(kepI, kepJ);
 }
