@@ -29,6 +29,11 @@ body {
   padding: 12px 20px;
 }
 
+.navBar a:hover {
+  color: #4286f4;
+  background-color: black;
+}
+
 .navBar .current {
   color: #4286f4;
   background-color: black;
@@ -36,11 +41,6 @@ body {
 
 .navBar .about {
   float: right;
-}
-
-.navBar a:hover {
-  color: #4286f4;
-  background-color: black;
 }
 
 .foot {
@@ -66,8 +66,6 @@ body {
 }
 
 .foot a.toltelek {
-  display: table-cell;
-  vertical-align: middle;
   color: black;
   font-size: 12px;
   float: left;
@@ -93,13 +91,13 @@ body {
   padding: 12px 20px;
 }
 
-.alertBox #ok {
+.alertBox .ok {
   float: right;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.alertBox #ok:hover {
+.alertBox .ok:hover {
   color: #4286f4;
   background-color: black;
 }
@@ -112,17 +110,17 @@ body {
   text-align: left;
 }
 
-.torzs a {
-  color: black;
-  text-decoration: underline;
+.torzs .cim {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 .torzs li {
   padding-top: 5px;
 }
 
-.torzs .cim {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  text-align: center;
+.torzs a {
+  color: black;
+  text-decoration: underline;
 }

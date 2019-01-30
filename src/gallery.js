@@ -1,5 +1,5 @@
 function bezar() {
-  document.getElementById('csukjBe').style.display = 'none';
+  document.getElementsByClassName("alertBox")[0].style.display = "none";
 }
 
 //https://stackoverflow.com/questions/966225/how-can-i-create-a-two-dimensional-array-in-javascript

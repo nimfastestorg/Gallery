@@ -1,3 +1,3 @@
 function bezar() {
-  document.getElementById("csukjBe").style.display = "none";
+  document.getElementsByClassName("alertBox")[0].style.display = "none";
 }
