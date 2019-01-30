@@ -51,16 +51,27 @@ body {
   left: 0px;
 }
 
-.foot p, .foot a{
+.foot table {
+  width: 100%;
+}
+
+.foot p.toltelek {
   color: black;
   font-size: 12px;
   float: right;
   padding: 30px 20px;
   margin: 0px;
+  text-align: right;
 }
 
-.foot a{
+.foot a.toltelek {
+  display: table-cell;
+  vertical-align: middle;
+  color: black;
+  font-size: 12px;
   float: left;
+  padding: 30px 20px;
+  margin: 0px;
 }
 
 .plcHldr {
